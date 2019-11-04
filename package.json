@@ -1,0 +1,14 @@
+{
+  "name": "poc-apollo-server-graphql-module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "github:derek-fong/poc-apollo-server-graphql-module.git",
+  "author": "Derek Fong <derek.fong@alppix.com>",
+  "bugs": {
+    "url": "https://github.com/derek-fong/poc-apollo-server-graphql-module/issues"
+  },
+  "homepage": "https://github.com/derek-fong/poc-apollo-server-graphql-module#readme"
+}
