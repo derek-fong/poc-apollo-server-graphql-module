@@ -1,10 +1,19 @@
 import express from 'express';
+import { express as voyagerMiddleware } from 'graphql-voyager/middleware';
 
 import { apolloServer } from './apollo-server';
 import { environment } from './environment';
 
 (async function bootstrap(): Promise<void> {
   const app = express();
+  const voyagerEndpointUrl = environment.voyager.endpointUrl;
+
+  if (voyagerEndpointUrl) {
+    app.use(
+      '(/:baseDir)?/voyager',
+      voyagerMiddleware({ endpointUrl: voyagerEndpointUrl })
+    );
+  }
 
   apolloServer.applyMiddleware({ app, path: '/' });
 

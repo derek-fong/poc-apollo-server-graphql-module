@@ -2,6 +2,7 @@
   "name": "poc-apollo-server-graphql-module",
   "version": "0.0.1",
   "license": "MIT",
+  "main": "dist/server.js",
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.$NODE_ENV.js",
@@ -15,7 +16,9 @@
   },
   "homepage": "https://github.com/derek-fong/poc-apollo-server-graphql-module#readme",
   "dependencies": {
-    "apollo-server-express": "^2.9.7"
+    "@graphql-modules/core": "^0.7.13",
+    "apollo-server-express": "^2.9.7",
+    "graphql-voyager": "^1.0.0-rc.28"
   },
   "devDependencies": {
     "@types/webpack-env": "^1.14.1",

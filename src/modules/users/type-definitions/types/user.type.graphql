@@ -1,0 +1,11 @@
+# User.
+type User implements BaseUser {
+  # User ID.
+  id: ID!
+
+  # First name.
+  firstName: String!
+
+  # Last name.
+  lastName: String!
+}

@@ -1,0 +1,19 @@
+"""
+Story.
+"""
+type Story {
+  """
+  Story ID.
+  """
+  id: ID!
+
+  """
+  Story title.
+  """
+  title: String!
+
+  """
+  Story content.
+  """
+  content: String!
+}

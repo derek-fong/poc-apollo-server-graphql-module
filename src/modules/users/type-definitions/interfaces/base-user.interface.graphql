@@ -1,0 +1,19 @@
+"""
+Base user interface.
+"""
+interface BaseUser {
+  """
+  User ID.
+  """
+  id: ID!
+
+  """
+  First name.
+  """
+  firstName: String!
+
+  """
+  Last name.
+  """
+  lastName: String!
+}

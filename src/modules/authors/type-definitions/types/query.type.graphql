@@ -1,0 +1,4 @@
+type Query {
+  # Get author by ID.
+  author(id: ID!): Author
+}

@@ -8,6 +8,9 @@ export interface Environment {
     };
   };
   port: number | string;
+  voyager: {
+    endpointUrl: string | undefined;
+  };
 }
 
 export const environment: Environment = {
@@ -18,4 +21,7 @@ export const environment: Environment = {
     },
   },
   port: process.env.PORT || defaultPort,
+  voyager: {
+    endpointUrl: process.env.VOYAGER_ENDPOINT_URL,
+  },
 };
