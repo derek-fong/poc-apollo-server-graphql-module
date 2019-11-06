@@ -4,12 +4,28 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.$NODE_ENV.js",
+    "start": "node dist/server.js",
+    "start:env": "node --require dotenv/config dist/server.js"
   },
   "repository": "github:derek-fong/poc-apollo-server-graphql-module.git",
   "author": "Derek Fong <derek.fong@alppix.com>",
   "bugs": {
     "url": "https://github.com/derek-fong/poc-apollo-server-graphql-module/issues"
   },
-  "homepage": "https://github.com/derek-fong/poc-apollo-server-graphql-module#readme"
+  "homepage": "https://github.com/derek-fong/poc-apollo-server-graphql-module#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.9.7"
+  },
+  "devDependencies": {
+    "@types/webpack-env": "^1.14.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  }
 }
