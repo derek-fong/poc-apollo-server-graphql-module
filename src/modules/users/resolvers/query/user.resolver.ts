@@ -1,7 +1,7 @@
 import { ModuleContext } from '@graphql-modules/core';
 
-import { User } from '../../models/interfaces/user.interface';
 import { UsersProvider } from '../../providers/users.provider';
+import { User } from '../../../../graphql-codegen-typings';
 
 interface Args {
   id: string;

@@ -2,5 +2,5 @@ extend type Story {
   """
   Story comments.
   """
-  comments: [Comment]!
+  comments: [Comment]
 }

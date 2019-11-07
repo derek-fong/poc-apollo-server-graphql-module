@@ -20,7 +20,7 @@ type Author implements BaseUser {
   """
   Followers.
   """
-  followers: [User]!
+  followers: [User]
 
   """
   Last name.

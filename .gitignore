@@ -1,6 +1,7 @@
 # Compiled Outputs
 /dist
 /tmp
+graphql-codegen-typings.d.ts
 
 # Dependencies
 /node_modules

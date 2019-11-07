@@ -1,6 +1,6 @@
 import { Injectable } from '@graphql-modules/di';
 
-import { User } from '../models/interfaces/user.interface';
+import { User } from '../../../graphql-codegen-typings';
 
 @Injectable()
 export class UsersProvider {

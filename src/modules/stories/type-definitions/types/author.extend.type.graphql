@@ -2,5 +2,5 @@ extend type Author {
   """
   Stories published by author.
   """
-  stories: [Story]!
+  stories: [Story]
 }

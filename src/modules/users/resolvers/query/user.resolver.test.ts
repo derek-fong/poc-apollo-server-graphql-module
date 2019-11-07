@@ -3,8 +3,8 @@ import { gql } from 'apollo-server-express';
 import { execute } from 'graphql';
 
 import { UsersProvider } from '../../providers/users.provider';
-import { User } from '../../models/interfaces/user.interface';
 import { UsersModule } from '../../users.module';
+import { User } from '../../../../graphql-codegen-typings';
 
 describe('userResolver', (): void => {
   const { schema, injector } = UsersModule;

@@ -15,7 +15,7 @@ type Story {
   """
   Users who clapped for this story.
   """
-  clappers: [User]!
+  clappers: [User]
 
   """
   Story content.
