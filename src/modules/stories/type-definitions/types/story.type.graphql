@@ -8,12 +8,32 @@ type Story {
   id: ID!
 
   """
-  Story title.
+  Story author.
   """
-  title: String!
+  author: Author!
+
+  """
+  Users who clapped for this story.
+  """
+  clappers: [User]!
 
   """
   Story content.
   """
   content: String!
+
+  """
+  Story published date and time.
+  """
+  publishedAt: DateTime!
+
+  """
+  Story title.
+  """
+  title: String!
+
+  """
+  Story last updated date and time.
+  """
+  udpatedAt: DateTime
 }

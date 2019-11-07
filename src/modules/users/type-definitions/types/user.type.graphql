@@ -1,11 +1,24 @@
-# User.
+"""
+User.
+"""
 type User implements BaseUser {
-  # User ID.
+  """
+  User ID.
+  """
   id: ID!
 
-  # First name.
+  """
+  User e-mail address.
+  """
+  emailAddress: EmailAddress!
+
+  """
+  First name.
+  """
   firstName: String!
 
-  # Last name.
+  """
+  Last name.
+  """
   lastName: String!
 }

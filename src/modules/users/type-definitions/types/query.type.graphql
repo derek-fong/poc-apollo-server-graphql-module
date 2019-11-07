@@ -1,0 +1,11 @@
+type Query {
+  """
+  Get user by ID.
+  """
+  user(
+    """
+    User ID.
+    """
+    id: ID
+  ): User
+}

@@ -1,0 +1,6 @@
+type Mutation {
+  """
+  Publish story.
+  """
+  publishStory(input: PublishStoryInput!): Story!
+}
