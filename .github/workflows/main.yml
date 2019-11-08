@@ -31,6 +31,8 @@ jobs:
           ./cc-test-reporter before-build
           npm test -- --runInBand --ci --coverage --reporters=default --reporters=jest-junit
       - name: Upload Test Report to Code Climate
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         run: ./cc-test-reporter after-build --exit-code $?
 
   build:
