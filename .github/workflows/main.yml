@@ -40,7 +40,7 @@ jobs:
       - name: Upload Test Report to Code Climate
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        run: ./cc-test-reporter after-build --exit-code $?
+        run: ./cc-test-reporter after-build --coverage-input-type lcov --exit-code $?
       - name: Upload Test Report
         uses: actions/upload-artifact@v1
         with:
@@ -82,7 +82,6 @@ jobs:
 
   semantic-release:
     name: Semantic Release
-    if: github.ref == 'master'
     needs: test
     runs-on: ubuntu-latest
     steps:
