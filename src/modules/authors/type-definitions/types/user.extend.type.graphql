@@ -1,0 +1,6 @@
+extend type User {
+  """
+  Authors that user is following.
+  """
+  following: [Author]
+}

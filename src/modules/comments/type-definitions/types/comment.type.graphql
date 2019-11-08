@@ -1,0 +1,29 @@
+"""
+Comment.
+"""
+type Comment {
+  """
+  Comment ID.
+  """
+  id: ID!
+
+  """
+  Comment content.
+  """
+  content: String!
+
+  """
+  Comment creation date and time.
+  """
+  createdAt: DateTime!
+
+  """
+  Comment creator.
+  """
+  createdBy: User!
+
+  """
+  Comment title.
+  """
+  title: String!
+}

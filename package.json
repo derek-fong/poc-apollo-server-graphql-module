@@ -1,0 +1,49 @@
+{
+  "name": "poc-apollo-server-graphql-module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/server.js",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.$NODE_ENV.js",
+    "graphql:codegen": "graphql codegen",
+    "prebuild": "npm run graphql:codegen",
+    "pretest": "npm run graphql:codegen",
+    "start": "node dist/server.js",
+    "start:env": "node --require dotenv/config dist/server.js",
+    "test": "jest"
+  },
+  "repository": "github:derek-fong/poc-apollo-server-graphql-module.git",
+  "author": "Derek Fong <derek.fong@alppix.com>",
+  "bugs": {
+    "url": "https://github.com/derek-fong/poc-apollo-server-graphql-module/issues"
+  },
+  "homepage": "https://github.com/derek-fong/poc-apollo-server-graphql-module#readme",
+  "dependencies": {
+    "@graphql-modules/core": "^0.7.13",
+    "apollo-server-express": "^2.9.7",
+    "express": "^4.17.1",
+    "graphql-scalars": "^1.0.4",
+    "graphql-voyager": "^1.0.0-rc.28",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@graphql-codegen/typescript": "^1.8.3",
+    "@test-graphql-cli/codegen": "4.0.0-alpha-e4f7c86.67",
+    "@types/jest": "^24.0.22",
+    "@types/webpack-env": "^1.14.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "graphql-cli": "4.0.0-alpha-e4f7c86.67",
+    "jest": "^24.9.0",
+    "jest-junit": "^9.0.0",
+    "jest-transform-graphql": "^2.1.0",
+    "ts-jest": "^24.1.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

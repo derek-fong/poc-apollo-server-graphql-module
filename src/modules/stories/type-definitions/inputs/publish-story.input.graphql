@@ -1,0 +1,14 @@
+"""
+Publish story input.
+"""
+input PublishStoryInput {
+  """
+  Story content.
+  """
+  content: String!
+
+  """
+  Story title.
+  """
+  title: String!
+}

@@ -1,0 +1,6 @@
+extend type Story {
+  """
+  Story comments.
+  """
+  comments: [Comment]
+}

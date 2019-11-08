@@ -1,0 +1,11 @@
+type Query {
+  """
+  Get story by ID.
+  """
+  story(id: ID!): Story
+
+  """
+  Get stories by author.
+  """
+  storiesByAuthor(authorID: ID!): [Story]!
+}

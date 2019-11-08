@@ -1,0 +1,6 @@
+extend type User {
+  """
+  Reading list.
+  """
+  readingList: [Story]
+}

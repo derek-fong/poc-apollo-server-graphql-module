@@ -1,0 +1,29 @@
+"""
+Author.
+"""
+type Author implements BaseUser {
+  """
+  Author ID.
+  """
+  id: ID!
+
+  """
+  Author e-mail address.
+  """
+  emailAddress: EmailAddress!
+
+  """
+  First name.
+  """
+  firstName: String!
+
+  """
+  Followers.
+  """
+  followers: [User]
+
+  """
+  Last name.
+  """
+  lastName: String!
+}
