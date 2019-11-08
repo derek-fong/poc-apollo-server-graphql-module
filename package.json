@@ -6,8 +6,10 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.$NODE_ENV.js",
+    "graphql:codegen": "graphql codegen",
+    "prebuild": "npm run graphql:codegen",
+    "pretest": "npm run graphql:codegen",
     "start": "node dist/server.js",
-    "prebuild": "graphql codegen",
     "start:env": "node --require dotenv/config dist/server.js",
     "test": "jest"
   },
@@ -20,6 +22,7 @@
   "dependencies": {
     "@graphql-modules/core": "^0.7.13",
     "apollo-server-express": "^2.9.7",
+    "express": "^4.17.1",
     "graphql-scalars": "^1.0.4",
     "graphql-voyager": "^1.0.0-rc.28",
     "reflect-metadata": "^0.1.13"
@@ -33,6 +36,7 @@
     "dotenv": "^8.2.0",
     "graphql-cli": "4.0.0-alpha-e4f7c86.67",
     "jest": "^24.9.0",
+    "jest-junit": "^9.0.0",
     "jest-transform-graphql": "^2.1.0",
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.2.1",

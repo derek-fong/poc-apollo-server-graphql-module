@@ -2,6 +2,7 @@
 /dist
 /tmp
 graphql-codegen-typings.d.ts
+junit.xml
 
 # Dependencies
 /node_modules
