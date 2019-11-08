@@ -73,8 +73,9 @@ jobs:
           name: dist
           path: dist
 
-  release:
-    name: Release
+  semantic-release:
+    name: Semantic Release
+    if: github.ref == 'master'
     needs: test
     runs-on: ubuntu-latest
     env:
