@@ -54,7 +54,7 @@ jobs:
         run: |
           npm run build
           npm prune --production
-          cp node_modules dist
+          cp -r node_modules dist
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v1
