@@ -22,8 +22,16 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install Dependencies
         run: npm ci
+      - name: Setup Code Climate Test Reporter
+        run: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+          chmod +x ./cc-test-reporter
       - name: Run Unit Tests
-        run: npm test -- --runInBand --ci --coverage --reporters=default --reporters=jest-junit
+        run: |
+          ./cc-test-reporter before-build
+          npm test -- --runInBand --ci --coverage --reporters=default --reporters=jest-junit
+      - name: Upload Test Report to Code Climate
+        run: ./cc-test-reporter after-build --exit-code $?
 
   build:
     name: Build
@@ -51,10 +59,7 @@ jobs:
       - name: Build
         env:
           NODE_ENV: production
-        run: |
-          npm run build
-          npm prune --production
-          cp -r node_modules dist
+        run: npm run build
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v1
